@@ -6,3 +6,42 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+//Font Awesome
+@import "node_modules/font-awesome/scss/font-awesome.scss";
+
+.photo-profile {
+    height: 150px;
+    width: 150px;
+}
+.name, .user {
+    font-weight: bolder;
+}
+.post {
+    position: relative;
+    flex: 0 0 33%;
+    max-width: 30vw;
+    max-height: 30vw;
+    img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+        padding: 5px;
+    }
+    .post-info {
+        position: absolute;
+        z-index: 9999;
+        visibility: hidden;
+        right: 5px;
+        bottom: 5px;
+        width: max-content;
+        padding: 5px 3px 3px 5px;
+        border-radius: 15px 0px 0px 0px;
+        background: #000000;
+        opacity: 0.75;
+        color:white;
+    }
+    &:hover>.post-info {
+        visibility: visible;
+    }
+}
