@@ -24,3 +24,27 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+/*
+--routes--
+account
+account/save
+account/edit
+account/password
+account/email
+account/notifications
+account/privacy
+register
+recover
+legal/term
+legal/privacy
+about
+{{username}}
+{{username}}/tagged
+{{username}}/followers
+{{username}}/following
+post/create
+post/delete
+post/{{code_post}}
+explore
+*/
