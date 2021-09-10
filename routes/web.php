@@ -48,5 +48,5 @@ about
 post/create
 post/delete
 post/{{code_post}}
-explore
+explore??
 */

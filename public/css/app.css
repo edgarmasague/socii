@@ -13032,10 +13032,11 @@ h3 {
 .photo-profile {
   height: 150px;
   width: 150px;
+  margin: auto 25%;
 }
 
 .name, .user {
-  font-weight: bolder;
+  font-weight: bold;
 }
 
 .post {
@@ -13066,6 +13067,22 @@ h3 {
   opacity: 0.75;
   color: white;
 }
-.post:hover > .post-info {
+.post:hover > a .post-info {
   visibility: visible;
+}
+
+.lightbox {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  display: none;
+  background: #000000a8;
+}
+.lightbox .post-content {
+  margin: auto;
+  width: 50%;
+  padding: 0;
 }

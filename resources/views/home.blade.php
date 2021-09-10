@@ -55,5 +55,10 @@
                 <img src="img/photo7.jpg">
             </div>
     </div>
+    <div class="lightbox">
+        <div class="post-content">
+            <img src="img/photo7.jpg" class="img-fluid">
+        </div>
+    </div>
 </div>
 @endsection

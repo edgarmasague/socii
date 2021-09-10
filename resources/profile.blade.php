@@ -28,32 +28,32 @@
         </div>
     </div>
     <div class="posts row pt-5">
-            <div class="post">
-                <a href="">
-                    <img src="img/photo2.jpg">
-                    <div class="post-info">
-                        <span>5</span>
-                        <i class="fa fa-thumbs-up" aria-hidden="true"></i>
-                        <span>10</span>
-                        <i class="fa fa-comments" aria-hidden="true"></i>
-                    </div>
-                </a>
-            </div>
-            <div class="post">
-                <img src="img/photo3.jpg">
-            </div>
-            <div class="post">
-                <img src="img/photo4.jpg">
-            </div>
-            <div class="post">
-                <img src="img/photo5.jpg">
-            </div>
-            <div class="post">
-                <img src="img/photo6.jpg">
-            </div>
-            <div class="post">
-                <img src="img/photo7.jpg">
-            </div>
+        <div class="post">
+            <a href="">
+                <img src="img/photo2.jpg">
+                <div class="post-info">
+                    <span>5</span>
+                    <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                    <span>10</span>
+                    <i class="fa fa-comments" aria-hidden="true"></i>
+                </div>
+            </a>
+        </div>
+        <div class="post">
+            <img src="img/photo3.jpg">
+        </div>
+        <div class="post">
+            <img src="img/photo4.jpg">
+        </div>
+        <div class="post">
+            <img src="img/photo5.jpg">
+        </div>
+        <div class="post">
+            <img src="img/photo6.jpg">
+        </div>
+        <div class="post">
+            <img src="img/photo7.jpg">
+        </div>
     </div>
 </div>
 @endsection

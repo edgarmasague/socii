@@ -8,6 +8,7 @@ use App\Models\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Validation\Rule;
 
 class RegisterController extends Controller
 {
@@ -23,7 +24,6 @@ class RegisterController extends Controller
     */
 
     use RegistersUsers;
-
     /**
      * Where to redirect users after registration.
      *
@@ -49,22 +49,14 @@ class RegisterController extends Controller
      */
     protected function validator(array $data)
     {
+        //Reserved word list of usernames where they have not conflict with routes and other key words
+        $black_list = array('account', 'post', 'explore', 'register', 'login', 'logout', 'password', 'sanctum', 'api', 'recover', 'reset', 'legal', 'about', 'root', 'adm');
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
-            'username' => ['required', 'string', 'max:255'],
+            'username' => ['required', 'string', 'max:255', Rule::notIn($black_list)],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
-        /*
-        confirm if the username is not in the reserved word list
-        account
-        post
-        explore
-        register
-        recover
-        legal
-        about
-        */
     }
 
     /**
