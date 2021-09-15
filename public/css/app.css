@@ -13029,6 +13029,10 @@ h3 {
   clip: auto;
 }
 
+* {
+  box-sizing: content-box;
+}
+
 .photo-profile {
   height: 150px;
   width: 150px;
@@ -13078,11 +13082,80 @@ h3 {
   top: 0;
   right: 0;
   z-index: 1;
-  display: none;
+  display: nones;
   background: #000000a8;
+  padding: 30px 0 0 0;
 }
 .lightbox .post-content {
   margin: auto;
-  width: 50%;
+  width: 95%;
   padding: 0;
+  display: flex;
+}
+.lightbox .post-content .post-photo {
+  flex: 0 0 75%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+.lightbox .post-content .post-photo img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+.lightbox .post-content .post-info {
+  flex: 0 0 25%;
+  background: white;
+  padding: 5px;
+  position: relative;
+}
+.lightbox .post-content .post-info .photo-owner {
+  width: 50px;
+  height: 50px;
+  margin-right: 5px;
+}
+.lightbox .post-content .post-info .post-header {
+  margin: 0 0 10px 0;
+}
+.lightbox .post-content .post-info .post-header .post-action {
+  margin: 20px auto;
+  padding: 10px 0;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  text-align: center;
+}
+.lightbox .post-content .post-info .post-header .post-action span {
+  padding-right: 5px;
+}
+.lightbox .post-content .post-info .post-header a {
+  color: black;
+}
+.lightbox .post-content .post-info .post-comments {
+  display: flex;
+}
+.lightbox .post-content .post-info .post-footer {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  right: 0;
+}
+.lightbox .post-content .post-info .post-footer .input-comment {
+  display: flex;
+}
+.lightbox .post-content .post-info .post-footer .input-comment input {
+  border: none;
+  border-bottom: 1px solid black;
+  flex: 0 0 75%;
+}
+.lightbox .post-content .post-info .post-footer .input-comment input:focus {
+  outline: none;
+}
+.lightbox .post-content .post-info .post-footer .input-comment button {
+  position: absolute;
+  right: 5px;
+  bottom: 0px;
+  color: black;
+  flex: 0 0 25%;
 }

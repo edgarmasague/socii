@@ -57,7 +57,35 @@
     </div>
     <div class="lightbox">
         <div class="post-content">
-            <img src="img/photo7.jpg" class="img-fluid">
+            <div class="post-photo">
+                <img src="img/photo7.jpg">
+            </div>
+            <div class="post-info">
+                <div class="post-header">
+                    <img src="img/photo1.jpg" class ="photo-owner rounded-circle" alt="">
+                    <span>Mister Dog</span>
+                    <div class="post-action">
+                        <a href=""><i class="fa fa-heart" aria-hidden="true"></i></a>
+                        <span>50</span>
+                        <a href=""><i class="fa fa-comments" aria-hidden="true"></i></a>
+                        <span>10</span>
+                        <a href=""><i class="fa fa-share-alt" aria-hidden="true"></i></a>
+                        <span>4</span>
+                    </div>
+                </div>
+                <div class="post-comments">
+                    <img src="img/photo1.jpg" class ="photo-owner rounded-circle" alt="">
+                    <div class="post-comment">
+                    <span>Mister Dog</span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi voluptatum nihil ad quae autem alias nesciunt aspernatur modi beatae nemo.
+                </div>
+                </div>
+                <div class="post-footer">
+                    <div class="input-comment">
+                        <input type="text" placeholder="Add comment">
+                        <button class="btn btn-outline-light">Post</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
