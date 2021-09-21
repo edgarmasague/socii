@@ -3,12 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
 
 class ProfileController extends Controller
 {
     //
-    public function index()
+    public function show($username)
     {
-        return view('profile');
+        $userdata = User::findOrFail($username);
+        return view('profile', compact('userdata'));
     }
 }

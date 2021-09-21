@@ -17,9 +17,16 @@ class CreateProfilesTable extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->string('name')->nullable();
+            $table->string('photo')->nullable();
+            $table->string('link')->nullable();
             $table->text('description')->nullable();
-            $table->string('photo');
+            $table->string('email')->nullable();
+            $table->string('email_visible');
+            $table->string('number')->nullable();
+            $table->string('number_visible');
+            $table->string('sex');
             $table->timestamps();
+            $table->index('user_id');
         });
     }
 

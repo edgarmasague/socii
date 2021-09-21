@@ -13043,11 +13043,16 @@ h3 {
   font-weight: bold;
 }
 
+.name {
+  text-transform: capitalize;
+}
+
 .post {
   position: relative;
-  flex: 0 0 33%;
+  flex: 0 0 32%;
   max-width: 30vw;
   max-height: 30vw;
+  margin: 0 5px 5px 0;
 }
 .post img {
   -o-object-fit: cover;
@@ -13082,7 +13087,7 @@ h3 {
   top: 0;
   right: 0;
   z-index: 1;
-  display: nones;
+  display: none;
   background: #000000a8;
   padding: 30px 0 0 0;
 }
@@ -13090,10 +13095,8 @@ h3 {
   margin: auto;
   width: 95%;
   padding: 0;
-  display: flex;
 }
 .lightbox .post-content .post-photo {
-  flex: 0 0 75%;
   -o-object-fit: cover;
      object-fit: cover;
   height: 100%;
@@ -13106,7 +13109,6 @@ h3 {
   width: 100%;
 }
 .lightbox .post-content .post-info {
-  flex: 0 0 25%;
   background: white;
   padding: 5px;
   position: relative;
