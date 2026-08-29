@@ -1,0 +1,44 @@
+// Color
+$color-paper:        #f3EFE5;
+$color-cream:        #EBDFC8;
+$color-gold:         #6B522B;
+$color-gold-dark:    #4A371B;
+$color-crimson:      #6E2028;
+$color-crimson-dark: #4E1519;
+$color-ink:          #1A1918;
+$color-white-soft:   #FBF9F3;
+
+// Background
+$texture-paper: url('/images/texture-paper.jpeg');
+
+// Fonts
+$font-display: 'Cormorant Garamond', 'Georgia', serif;
+$font-script:  'Great Vibes', cursive;
+$font-ui:      'IBM Plex Sans', -apple-system, sans-serif;
+$font-quote:   'Georgia', 'Cormorant Garamond', serif;
+$font-mono:    'IBM Plex Mono', ui-monospace, monospace;
+
+// Space
+$space-1: 0.5rem;
+$space-2: 1rem;
+$space-3: 1.5rem;
+$space-4: 2.5rem;
+$space-5: 4rem;
+$space-6: 6rem;
+
+// Border Radius
+$radius-sm: 4px;
+$radius-md: 12px;
+$radius-lg: 24px;
+
+// Shadow
+$shadow-page: 0 -20px 60px rgba(0, 0, 0, 0.45);
+$shadow-card: 0 6px 18px rgba(36, 35, 33, 0.25);
+
+// Layout
+$max-width:     1200px;
+$header-height: 84px;
+
+// Breakpoints
+$breakpoint-table:  900px;
+$breakpoint-mobile: 640px;
