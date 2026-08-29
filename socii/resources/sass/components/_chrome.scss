@@ -1,0 +1,219 @@
+@use '../variables' as *;
+
+.btn {
+    font-family: $font-ui;
+    font-size: 0.8rem;
+    letter-spacing: 0.15rem;
+    text-transform: uppercase;
+    transition: color 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+}
+
+.btn--solid {
+    padding: 0.85rem 2rem;
+    background: $color-crimson;
+    color: $color-cream;
+
+    &:hover {
+        background: $color-ink;
+    }
+}
+
+.btn--ghost {
+    color: rgba($color-ink, 0.5);
+    border-bottom: 1px solid rgba($color-ink, 0.2);
+    padding-bottom: 1px;
+
+    &:hover {
+        color: $color-gold;    }
+}
+
+.archive-nav {
+    flex-shrink: 0;
+    min-height: 56px;
+    border-bottom: 1px solid rgba($color-gold, 0.2);
+    padding: $space-1 $space-4;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: $space-1;
+    column-gap: $space-2;
+
+    &__brand {
+        display: flex;
+        align-items: center;
+        gap: $space-1;
+        flex-shrink: 0;
+
+        img {
+            width: auto;
+            height: 28px;
+        }
+
+        span {
+            font-family: $font-script;
+            font-size: 1.5rem;
+            color: $color-ink;
+        }
+    }
+
+    &__links {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: $space-3;
+    }
+
+    &__toggle {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+        width: 28px;
+        height: 28px;
+        background: transparent;
+        border: none;
+        padding: 0;
+
+        span {
+            display: block;
+            height: 2px;
+            width: 100%;
+            background: $color-ink;
+            border-radius: 2px;
+            transition: transform 0.25s ease, opacity 0.25s ease;
+        }
+
+        &[aria-expanded='true'] {
+            span:nth-child(1) {
+                transform: rotate(45deg) translateY(7px);
+            }
+
+            span:nth-child(2) {
+                opacity: 0;
+            }
+
+            span:nth-child(3) {
+                transform: rotate(-45deg) translateY(-7px);
+            }
+        }
+    }
+    
+    &__link {
+        font-family: $font-ui;
+        font-size: 0.8rem;
+        letter-spacing: 0.15rem;
+        text-transform: uppercase;
+        color: rgba($color-ink, 0.6);
+        transition: color 0.3s ease;
+        white-space: nowrap;
+
+        &:hover {
+            color: $color-gold;
+        }
+
+        &--active {
+            color: $color-crimson;
+        }
+    }
+
+    &__signup {
+        font-family: $font-ui;
+        font-size: 0.8rem;
+        letter-spacing: 0.15rem;
+        text-transform: uppercase;
+        padding: 0.4rem 1rem;
+        border: 1px solid $color-crimson;
+        color: $color-crimson;
+        white-space: nowrap;
+        transition: color 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+
+        &:hover {
+            background: $color-crimson;
+            color: $color-cream;
+        }
+    }
+}
+
+.archive-empty {
+    padding: $space-5 0;
+    text-align: center;
+
+    &__mark {
+        font-size: 2.5rem;
+        color: rgba($color-crimson, 0.3);
+        margin-bottom: $space-2;
+    }
+
+    &__label {
+        font-family: $font-ui;
+        font-size: 0.8rem;
+        letter-spacing: 0.15rem;
+        text-transform: uppercase;
+        color: rgba($color-ink, 0.4);
+        margin-bottom: $space-3;
+    }
+}
+
+.archive-footer {
+    flex-shrink: 0;
+    border-top: 1px solid rgba($color-gold, 0.2);
+    padding: $space-2 0;
+    text-align: center;
+
+    p {
+        font-family: $font-ui;
+        font-size: 0.8rem;
+        letter-spacing: 0.15rem;
+        color: rgba($color-ink, 0.3);
+    }
+}
+
+@media (max-width: $breakpoint-mobile) {
+    .archive-nav {
+        padding: $space-1 $space-2;
+        column-gap: $space-1;
+        position: relative;
+
+        &__brand {
+            span {
+                font-size: 1.2rem;
+            }
+        }
+
+        &__toggle {
+            display: flex;
+        }
+
+        &__links {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: $space-2;
+            padding: $space-3 $space-2;
+            background-color: $color-paper;
+            border-bottom: 1px solid rgba($color-gold, 0.2);
+            box-shadow: 0 10px 20px rgba(36, 35, 33, 0.12);
+            z-index: 20;
+
+            &--open {
+                display: flex;
+            }
+        }
+
+        &__link {
+            font-size: 0.85rem;
+            letter-spacing: 0.08rem;
+        }
+
+        &__signup {
+            font-size: 0.75rem;
+            letter-spacing: 0.08rem;
+            padding: 0.4rem 0.8rem;
+        }
+    }
+}
