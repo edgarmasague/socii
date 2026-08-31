@@ -13,6 +13,20 @@ return new class extends Migration
     {
         Schema::create('photos', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('gallery_id')
+                ->constrained()
+                ->cascadeOnDelete();
+            $table->foreignId('location_id')
+                ->nullable()
+                ->constrained()
+                ->nullOnDelete();
+            $table->string('path');
+            $table->string('filename');
+            $table->string('mime_type');
+            $table->unsignedBigInteger('size');
+            $table->unsignedInteger('width');
+            $table->unsignedInteger('height');
+            $table->timestamp('taken_at')->nullable();
             $table->timestamps();
         });
     }

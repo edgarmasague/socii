@@ -13,7 +13,13 @@ return new class extends Migration
     {
         Schema::create('subscriptions', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')
+                ->constrained()
+                ->cascadeOnDelete();
+            $table->foreignId('gallery_id')
+                ->cascadeOnDelete();
             $table->timestamps();
+            $table->unique(['user_id', 'gallery_id']);
         });
     }
 
