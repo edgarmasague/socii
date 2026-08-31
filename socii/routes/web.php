@@ -6,7 +6,7 @@ use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\PhotoController;
 use App\Http\Controllers\ProfileController;
 
-Route::get('/', HomeController::class)
+Route::get('/', [HomeController::class, 'index'])
     ->name('home');
 
 Route::get('/galleries', [GalleryController::class, 'index'])
