@@ -5,7 +5,7 @@
         </a>
         <div class="auth-card">
             <div class="auth-card__header">
-                <span class="auto-card__mark">✦</span>
+                <span class="auth-card__mark">✦</span>
                 <h1 class="auth-card__title">Entrar</h1>
                 <p class="auth-card__subtitle">Continua tu archivo de momentos.</p>
             </div>
