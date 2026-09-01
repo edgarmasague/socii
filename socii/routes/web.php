@@ -19,8 +19,8 @@ Route::get('/photos/create', [PhotoController::class, 'create'])
     ->middleware('auth')
     ->name('photos.create');
 
-Route::get('/photo/{photo}', [PhotoController::class, 'show'])
-    ->name('photo.show');
+Route::get('/photos/{photo}', [PhotoController::class, 'show'])
+    ->name('photos.show');
 
 Route::get('/profile/{user}', [ProfileController::class, 'show'])
     ->name('profile.show');
