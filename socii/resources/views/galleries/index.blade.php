@@ -20,7 +20,7 @@
             @if($galleries->count())
                 <div class="gallery-grid">
                     @foreach($galleries as $gallery)
-                        <x-gallery-tile :gallery="$gallery" />
+                        <x-gallery-card :gallery="$gallery" />
                     @endforeach
                 </div>
                 <div class="galleries-pagination">
