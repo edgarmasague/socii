@@ -1,0 +1,185 @@
+@use '../variables' as *;
+
+.auth-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: $space-4;
+    background-color: $color-paper;
+    background-image: $texture-paper;
+    background-repeat: repeat;
+
+    &__brand {
+        display: flex;
+        align-items: center;
+        gap: $space-1;
+        font-family: $font-script;
+        font-size: 1.6rem;
+        color: $color-ink;
+        margin-bottom: $space-4;
+        
+        span {
+            font-family: $font-ui;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 0.85rem;
+            border: 1px solid $color-ink;
+            width: 26px;
+            height: 26px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 400px;
+    background-color: $color-cream;
+    border: 1px solid rgba($color-gold, 0.3);
+    border-radius: $radius-md;
+    box-shadow: 0 10px 30px rgba(36, 35, 33, 0.12);
+    padding: $space-4 $space-4 $space-3;
+
+    &__header {
+        text-align: center;
+        margin-bottom: $space-3;
+    }
+
+    &__mark {
+        display: block;
+        color: $color-crimson;
+        font-size: 1.1rem;
+        margin-bottom: $space-1;
+    }
+
+    &__title {
+        font-family: $font-display;
+        font-size: 1.9rem;
+        color: $color-ink;
+    }
+
+    &__subtitle {
+        font-family: $font-quote;
+        font-style: italic;
+        font-size: 0.85rem;
+        color: rgba($color-ink, 0.55);
+        margin-top: 0.2rem;
+    }
+
+    &__status {
+        font-family: $font-ui;
+        font-size: 0.8rem;
+        color: $color-crimson;
+        background: rgba($color-crimson, 0.08);
+        border-radius: $radius-sm;
+        padding: $space-1 $space-2;
+        margin-bottom: $space-3;
+        text-align: center;
+    }
+
+    &__switch {
+        text-align: center;
+        margin-top: $space-3;
+        font-family: $font-ui;
+        font-size: 0.82rem;
+        color: rgba($color-ink, 0.55);
+
+        a {
+            color: $color-crimson;
+            transition: opacity 0.3s ease;
+
+            &:hover {
+            opacity: 0.7;
+            }
+        }
+    }
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: $space-3;
+
+    &__row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: $space-2;
+        margin-top: -$space-1;
+    }
+
+    &__submit {
+        width: 100%;
+        padding: 0.85rem;
+        margin-top: $space-1;
+    }
+}
+
+.auth-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+
+    label {
+        font-family: $font-ui;
+        font-size: 0.7rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: rgba($color-ink, 0.5);
+    }
+
+    input {
+        font-family: $font-ui;
+        font-size: 0.95rem;
+        color: $color-ink;
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid rgba($color-gold-dark, 0.4);
+        padding: 0.4rem 0.1rem;
+        transition: border-color 0.3s ease;
+
+            &:focus {
+            outline: none;
+            border-bottom-color: $color-crimson;
+        }
+
+        &::placeholder {
+            color: rgba($color-ink, 0.3);
+        }
+    }
+
+    &__error {
+        font-family: $font-ui;
+        font-size: 0.72rem;
+        color: $color-crimson;
+    }
+}
+
+.auth-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: $font-ui;
+    font-size: 0.78rem;
+    color: rgba($color-ink, 0.6);
+    cursor: pointer;
+
+    input {
+        accent-color: $color-crimson;
+  }
+}
+
+.auth-link {
+    font-family: $font-ui;
+    font-size: 0.78rem;
+    color: rgba($color-ink, 0.5);
+    transition: color 0.3s ease;
+
+    &:hover {
+        color: $color-crimson;
+    }
+}

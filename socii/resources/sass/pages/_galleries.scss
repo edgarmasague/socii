@@ -1,0 +1,190 @@
+@use '../variables' as *;
+
+.galleries-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: $color-paper;
+    background-image: $texture-paper;
+    background-repeat: repeat;
+}
+
+.galleries-header {
+    padding: $space-5 $space-4 $space-4;
+    text-align: center;
+
+    &__line {
+        height: 1px;
+        max-width: 200px;
+        margin: 0 auto;
+        background: rgba($color-gold, 0.3);
+
+        &:first-child {
+            margin-bottom: $space-3;
+        }
+
+        &:last-child {
+            margin-top: $space-4;
+        }
+    }
+
+    &__inner {
+        max-width: 640px;
+        margin: 0 auto;
+    }
+
+    &__mark {
+        display: block;
+        color: $color-crimson;
+        font-size: 1.1rem;
+        margin-bottom: $space-2;
+    }
+
+    &__title {
+        font-family: $font-display;
+        font-size: 2.5rem;
+        color: $color-ink;
+        margin-bottom: $space-2;
+    }
+
+    &__subtitle {
+        font-family: $font-ui;
+        font-size: 0.95rem;
+        color: rgba($color-ink, 0.6);
+        line-height: 1.6;
+    }
+}
+
+.galleries-body {
+    flex: 1;
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 $space-4 $space-5;
+}
+
+.galleries-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $space-4;
+}
+
+.galleries-card {
+    display: block;
+    text-decoration: none;
+
+    &__frame {
+        aspect-ratio: 5 / 4;
+        padding: 8px;
+        background-color: $color-cream;
+        border: 1px solid rgba($color-gold, 0.3);
+        border-radius: $radius-md;
+        box-shadow: 0 4px 15px rgba(36, 35, 33, 0.12);
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            border-radius: #{$radius-md - 4px};
+            transition: transform 0.5s ease;
+        }
+    }
+
+    &__placeholder {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: #{$radius-md - 4px};
+        background: rgba($color-gold, 0.08);
+        color: rgba($color-crimson, 0.35);
+        font-size: 2rem;
+    }
+
+    &:hover {
+        .gallery-card__frame {
+            transform: translateY(-4px);
+            box-shadow: 0 14px 30px rgba(36, 35, 33, 0.22);
+
+            img {
+                transform: scale(1.03);
+            }
+        }
+    }
+
+    &__meta {
+        padding: $space-2 $space-1 0;
+    }
+
+    &__name {
+        font-family: $font-display;
+        font-size: 1.3rem;
+        color: $color-ink;
+        margin-bottom: 0.25rem;
+    }
+
+    &__byline {
+        font-family: $font-ui;
+        font-size: 0.78rem;
+        letter-spacing: 0.04em;
+        color: rgba($color-ink, 0.5);
+        display: flex;
+        align-items: center;
+        gap: $space-1;
+        margin-bottom: $space-1;
+    }
+
+    &__count {
+        &::before {
+            content: '·';
+            margin-right: $space-1;
+            color: rgba($color-gold-dark, 0.7);
+        }
+    }
+
+    &__desc {
+        font-family: $font-ui;
+        font-size: 0.85rem;
+        color: rgba($color-ink, 0.65);
+        line-height: 1.5;
+    }
+}
+
+.galleries-pagination {
+    margin-top: $space-5;
+    display: flex;
+    justify-content: center;
+
+    nav {
+        font-family: $font-ui;
+        font-size: 0.8rem;
+    }
+}
+
+.galleries-empty {
+    &__cta {
+        display: inline-flex;
+        margin-top: $space-2;
+    }
+}
+
+@media (max-width: $breakpoint-tablet) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: $breakpoint-mobile) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+    .galleries-header {
+        &__title {
+        font-size: 2rem;
+        }
+    }
+}
